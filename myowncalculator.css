@@ -1,0 +1,166 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  
+}
+
+.container{
+    border: 1px solid black;
+    margin: auto;
+    width: 20rem;
+    height: 25rem;
+    border-radius: 10%;
+    padding: 1rem;
+    margin-top: 3rem;
+    background-image: radial-gradient(circle, skyblue, white);
+   
+}
+
+.display{
+    border: 1px solid black;
+    width: 17rem;
+    height: 3rem;
+    margin: auto;
+    margin-top: 1rem;
+    border-radius: 40px;
+    text-align: right;
+    padding: 0.5rem;
+    font-size: 2rem;
+    
+}
+
+.keys{
+    display: grid;
+    grid-template-columns: repeat(4, 20%);
+    grid-template-rows: repeat(6, 20%);
+    gap: 1rem;
+    grid-template-areas: 
+    ". . . ."
+    ". . . ."
+    "seven eight nine equal"
+    "four five six equal"
+    "one two three equal"
+    "zero dot cancle equal";
+}
+
+.equal{
+    grid-area: equal;
+    background-color: rgb(26, 26, 233);
+    border-radius: 35px;
+    color: whitesmoke;
+    font-size: 2rem;
+}
+
+.equal:hover{
+    background-color:rgb(10, 89, 206);
+   animation: animate 1s ease-out ;
+}
+
+@keyframes animate{
+    0%{
+        transform: scale(1.1);
+        transform: skew(-10deg);
+
+    }
+    100%{
+        transform: scale(1);
+        transform: skew(10deg)
+
+    }
+}
+
+.keys .cancle{
+    background-color: rgb(196, 14, 14);
+    color: whitesmoke;
+}
+.keys .arrow{
+    background-color: rgb(240, 163, 163);
+    animation: arrow .5s linear infinite;
+}
+@keyframes arrow{
+    100%{
+        transform:scale(1.1)
+    }
+}
+.operation{
+    font-size: 1.5rem;
+    background-color:rgb(190, 181, 181);
+   border: 0;
+   outline: 0;
+   border-radius: 10%;
+}
+
+.operation:hover{
+    background-color:rgb(131, 127, 127);
+    color: whitesmoke;
+    animation: toscale .5s linear infinite;
+}
+
+@keyframes toscale{
+    0%{
+        transform: scale(1.2);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+.numbers{
+    font-size: 1.5rem;
+    border-color: rgb(233, 224, 224);
+    border-radius: 10%;  
+}
+
+.numbers:hover{
+    background-color:rgb(87, 85, 85);
+    color: whitesmoke;
+    animation: toscale .5s linear ;
+}
+@media all and (max-width:290px){
+    .container{
+    border:0;
+    width: 15rem;
+    padding:0;
+   
+   
+}
+
+.display{
+    width: 13rem;
+    font-size: 1.5rem;
+    
+}
+
+.keys{
+    display: grid;
+    grid-template-columns: repeat(4, 18%);
+    grid-template-rows: repeat(6, 18%);
+    gap: 1rem;
+   
+}
+}
+
+@media all and (max-width:350px){
+    .container{
+        border:0;
+}
+
+.keys{
+    display: grid;
+    grid-template-columns: repeat(4, 19%);
+    grid-template-rows: repeat(6, 19%);
+    gap: 1rem;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    padding-left: 0.7rem;
+}
+
+}
+
+@media screen and (max-height:425px) {
+    .container{
+        margin-top: 1rem;
+        height: 24rem;
+}
+}
